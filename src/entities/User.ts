@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 @ObjectType()
 export default class User {
 
-    constructor(){
+    constructor() {
         if (!this.id) {
             this.id = uuid()
         }
@@ -17,7 +17,7 @@ export default class User {
     name: string
 
     @Field()
-    email?: string
+    email: string
 
     @Field()
     phone?: string
@@ -37,10 +37,10 @@ export default class User {
     @Field()
     bithDate: Date
 
-    @Field()
-    inclusionDate: Date
+    @Field({ nullable: true })
+    inclusionDate?: Date
 
-    @Field()
-    updateDate: Date
+    @Field({ nullable: true })
+    updateDate?: Date
 
 }
