@@ -7,10 +7,10 @@ module.exports = {
         path.resolve(__dirname, 'src', 'entities', '*.ts')
     ],
     migrations: [
-        path.resolve(__dirname, 'src', 'database', 'migrations')
+        path.resolve(__dirname, 'src', 'database', 'migrations', '*.ts')
     ],
     cli: {
-        entitiesDir: path.resolve(__dirname, 'src', 'entities', '*.ts'),
+        entitiesDir: path.resolve(__dirname, 'src', 'entities'),
         migrationsDir: path.resolve(__dirname, 'src', 'database', 'migrations'),
     }
 }

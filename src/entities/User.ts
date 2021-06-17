@@ -48,21 +48,22 @@ export default class User {
     @Field()
     bithDate: Date
 
-    @Column({ nullable: true })
+    @Column()
     @Field({ nullable: true })
     inclusionDate?: Date
 
-    @Column({ nullable: true })
+    @Column()
     @Field({ nullable: true })
     updateDate?: Date
 
     @BeforeInsert()
-    registerInsert() {
+    private registerInsert?(): void {
         this.inclusionDate = new Date();
     }
 
     @BeforeUpdate()
-    registerUpdate() {
+    private registerUpdate?(): void {
         this.updateDate = new Date();
     }
+
 }
